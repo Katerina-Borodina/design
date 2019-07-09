@@ -1,0 +1,97 @@
+@import "partials/variables"
+@import "partials/mixins"
+@import "partials/interfase"
+
+.slider
+  position: relative
+  display: flex
+  flex-direction: column
+  +mq(425px)
+    height: 430px
+  &_line.swiper-pagination-bullets
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    position: absolute
+    width: 210px
+    height: 4px
+    z-index: 9
+    align-self: center
+    bottom: 60px
+    left: inherit
+    +mq(425px)
+      bottom: 0
+      top: 170px
+    a
+      width: 30px
+      height: 4px
+      background-color: $white
+      color: $white
+      transition: .1s ease-out
+      transition-delay: 0.1s
+      -webkit-border-radius: 0
+      -moz-border-radius: 0
+      border-radius: 0
+      opacity: 1
+      cursor: pointer
+      &:hover, &.swiper-pagination-bullet-active
+        background-color: $red
+  &_block
+    background: url("../img/slider/photo52.jpg") no-repeat center
+    background-size: cover
+    width: 100%
+    height: 820px
+    position: relative
+    +mq(425px)
+      height: 208px
+    .container
+      +mq(425px)
+        padding-right: 20px
+        padding-left: 20px
+    &-item
+      display: flex
+      flex-direction: column
+      width: 55%
+      height: 500px
+      background: $white
+      position: absolute
+      top: 120px
+      +mq(1145px)
+        width: 65%
+      +mq(768px)
+        width: 85%
+      +mq(425px)
+        width: 100%
+        top: 210px
+        height: 290px
+      .btn
+        align-self: flex-end
+        position: absolute
+        bottom: 0
+        +mq(425px)
+          align-self: center
+          bottom: 20px
+    &-text
+      display: flex
+      flex-direction: column
+      padding-left: 100px
+      +mq(1250px)
+        padding-left: 50px
+      +mq(425px)
+        padding-left: 21px
+      h1
+        padding-top: 220px
+        padding-bottom: 19px
+        @include h1-title
+        +mq(425px)
+          padding-top: 235px
+          font-size: 24px
+          line-height: 36px
+      p
+        padding-bottom: 84px
+        @include subtitle-text
+        +mq(425px)
+          font-size: 18px
+          line-height: 29px
+          color: $black-light
+

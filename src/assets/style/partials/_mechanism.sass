@@ -1,0 +1,268 @@
+@import "partials/variables"
+@import "partials/mixins"
+@import "partials/interfase"
+
+
+.mechanism
+  padding-top: 116px
+  padding-bottom: 120px
+  +mq(425px)
+    padding-top: 56px
+    padding-bottom: 55px
+  &_subtitle
+    @include signature
+    text-align: center
+    padding-bottom: 10px
+    +mq(425px)
+      font-size: 12px
+      line-height: 20px
+  h2
+    position: relative
+    @include h2-title
+    text-align: center
+    margin-bottom: 20px
+    &:after
+      @include line-red
+      left: 50%
+      margin-left: -15px
+      bottom: -20px
+  &_block
+    display: flex
+    flex-direction: row
+    justify-content: center
+    padding-top: 66px
+    padding-bottom: 20px
+    +mq(425px)
+      flex-direction: column
+      padding-top: 40px
+  .border-top
+    .mechanism_item
+      &:nth-child(3)
+        &:after
+          content: ''
+          display: block
+          position: absolute
+          border-right: 1px dashed #CCCCCC
+          top: 45px
+          left: 190px
+          height: 130%
+          +mq(1300px)
+            height: 128%
+          +mq(1024px)
+            display: none
+      &:nth-child(1)
+        &:after
+          content: ''
+          display: block
+          position: absolute
+          border-top: 1px dashed #CCCCCC
+          width: 107%
+          top: 45px
+          left: 190px
+          +mq(1300px)
+            width: 84%
+            left: 164px
+          +mq(1024px)
+            display: none
+      &:nth-child(2)
+        &:after
+          content: ''
+          display: block
+          position: absolute
+          border-top: 1px dashed #CCCCCC
+          width: 107%
+          top: 45px
+          left: 190px
+          +mq(1300px)
+            width: 84%
+            left: 164px
+          +mq(1024px)
+            display: none
+      &:nth-child(3)
+        &:after
+          content: ''
+          display: block
+          position: absolute
+          border-top: 1px dashed #CCCCCC
+          width: 69%
+          top: 45px
+          left: 190px
+          +mq(1300px)
+            left: 166px
+          +mq(1024px)
+            display: none
+  .border-bottom
+    flex-direction: row-reverse
+    +mq(1024px)
+      flex-direction: row
+    +mq(425px)
+      flex-direction: column
+      padding-top: 20px
+
+    .mechanism_item
+      &:nth-child(3)
+        &:before
+          content: ''
+          display: block
+          position: absolute
+          border-left: 1px dashed #CCCCCC
+          top: 0
+          left: 0
+          height: 121.2%
+          +mq(1300px)
+            height: 119.3%
+          +mq(1024px)
+            display: none
+      &:nth-child(3)
+        &:after
+          content: ''
+          display: block
+          position: absolute
+          border-top: 1px dashed #CCCCCC
+          width: 107%
+          top: 45px
+          left: 190px
+          +mq(1300px)
+            width: 83%
+            left: 166px
+          +mq(1024px)
+            display: none
+        &:before
+          content: ''
+          display: block
+          position: absolute
+          border-top: 1px dashed #CCCCCC
+          width: 66%
+          top: 45px
+          left: -92px
+          +mq(1024px)
+            display: none
+      &:nth-child(2)
+        &:after
+          content: ''
+          display: block
+          position: absolute
+          border-top: 1px dashed #CCCCCC
+          width: 107%
+          top: 45px
+          left: 190px
+          +mq(1300px)
+            width: 83%
+            left: 166px
+          +mq(1024px)
+            display: none
+      &:nth-child(1)
+        &:after
+          content: ''
+          display: block
+          position: absolute
+          border-top: 1px dashed #CCCCCC
+          width: 69%
+          top: 45px
+          left: 190px
+          +mq(1300px)
+            left: 166px
+          +mq(1024px)
+            display: none
+  &_item
+    justify-content: center
+    flex-direction: column
+    position: relative
+    +mq(425px)
+      padding-bottom: 40px
+    &:last-child
+      +mq(425px)
+      padding-bottom: 0
+    h4
+      @include h4-title
+      text-align: center
+      padding-top: 30px
+      padding-bottom: 20px
+    p
+      @include paragraph
+      text-align: center
+  &_img
+    width: 90px
+    height: 90px
+    background: $white
+    border: 1px solid $border-color
+    display: flex
+    justify-content: center
+    margin: 0 auto
+  button
+    margin-top: 55px
+    align-self: center
+    position: relative
+
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      border-bottom: 1px dashed #CCCCCC
+      width: 157%
+      left: -495px
+      bottom: 29px
+      +mq(1300px)
+        width: 109%
+        left: -355px
+      +mq(1024px)
+        display: none
+    &:before
+      content: ''
+      display: block
+      background: url("../img/arrow-border.svg") no-repeat center
+      position: absolute
+      width: 100%
+      left: -175px
+      bottom: 0
+      height: 100%
+      +mq(1024px)
+        display: none
+.mechanism
+  .container-fluid
+    display: flex
+    flex-direction: column
+    width: 100%
+    max-width: 1290px
+    padding: 0 100px
+    +mq(1300px)
+      max-width: 1024px
+    +mq(1024px)
+      max-width: 100%
+      padding: 20px
+.border-top
+  .mechanism_item
+    &:nth-child(1)
+      margin-right: 110px
+      +mq(1300px)
+        margin-right: 50px
+      +mq(425px)
+        margin-right: 0
+    &:nth-child(2)
+      margin-right: 110px
+      +mq(1300px)
+        margin-right: 50px
+      +mq(425px)
+        margin-right: 0
+
+.border-bottom
+  .mechanism_item
+    &:nth-child(1)
+      margin-left: 110px
+      +mq(1300px)
+        margin-left: 50px
+      +mq(1024px)
+          margin-left: 0
+    &:nth-child(2)
+      margin-left: 110px
+      +mq(1300px)
+        margin-left: 50px
+      +mq(425px)
+        margin-left: 0
+    &:nth-child(3)
+      +mq(1024px)
+        margin-left: 50px
+      +mq(425px)
+        margin-left: 0
+
+

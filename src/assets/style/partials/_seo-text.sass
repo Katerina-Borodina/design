@@ -1,0 +1,25 @@
+@import "partials/variables"
+@import "partials/mixins"
+@import "partials/interfase"
+
+.seo-text
+  padding-top: 120px
+  +mq(425px)
+    padding-top: 60px
+  h3
+    @include h3-title
+    color: $black
+    padding-bottom: 30px
+    +mq(425px)
+      padding-bottom: 30px
+  p
+    @include paragraph
+    color: $black-light
+    padding-bottom: 30px
+  .container
+    +mq(425px)
+      padding-right: 25px
+      padding-left: 25px
+
+
+

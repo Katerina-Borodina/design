@@ -1,0 +1,184 @@
+@import "variables"
+
+=mq($width, $type: max)
+  @media only screen and (#{$type}-width: $width)
+    @content
+
+//=and($width, $type-x: max, $width, $type-n: min)
+//  @media (#{$type-x}-width: $width) and (#{$type-n}-width: $width)
+//    @content
+
+
+@mixin normal
+  font-weight: 400
+
+@mixin bold
+  font-weight: 700
+
+@mixin font-family
+  font-family: 'Noto Sans', sans-serif
+
+@mixin h1-title
+  @include font-family
+  font:
+    style: normal
+    size: 64px
+  @include normal
+  line-height: 100px
+  color: $black
+  +mq(425px)
+    font-size: 48px
+
+@mixin h2-title
+  @include font-family
+  font:
+    style: normal
+    size: 48px
+  @include normal
+  line-height: 70px
+  color: $black
+  +mq(425px)
+    font-size: 24px
+    line-height: 35px
+
+@mixin h3-title
+  @include font-family
+  font:
+    style: normal
+    size: 36px
+  @include normal
+  line-height: normal
+  color: $black
+
+@mixin h4-title
+  @include font-family
+  font:
+    style: normal
+    size: 24px
+  @include normal
+  line-height: 39px
+  color: $black
+  +mq(425px)
+    font-size: 12px
+    line-height: 20px
+    letter-spacing: 0.1em
+
+@mixin h5-title
+  @include font-family
+  font:
+    style: normal
+    size: 18px
+  @include normal
+  line-height: 29px
+  color: $black
+
+@mixin h6-title
+  @include font-family
+  font:
+    style: normal
+    size: 14px
+  @include bold
+  line-height: normal
+  color: $black
+  text-transform: uppercase
+  +mq(425px)
+    font-size: 12px
+    line-height: 20px
+
+@mixin signature
+  @include font-family
+  font:
+    style: normal
+    size: 18px
+  @include normal
+  line-height: 29px
+  letter-spacing: 0.1em
+  text-transform: uppercase
+  color: $black
+  +mq(425px)
+    font-size: 12px
+    line-height: 20px
+
+@mixin line-red
+  content: ''
+  display: block
+  position: absolute
+  width: 30px
+  height: 4px
+  background: $red
+
+@mixin subtitle-text
+  @include font-family
+  font:
+    style: normal
+    size: 24px
+  @include normal
+  line-height: 36px
+  color: $black-light
+
+@mixin paragraph
+  @include font-family
+  font:
+    style: normal
+    size: 16px
+  @include normal
+  line-height: 26px
+  color: $black-light
+
+@mixin paragraph-small
+  @include font-family
+  font:
+    style: normal
+    size: 14px
+  @include normal
+  line-height: 23px
+  color: $black-light
+
+@mixin tag-text-black
+  @include font-family
+  font:
+    style: normal
+    size: 12px
+  @include normal
+  line-height: normal
+  text-align: center
+  letter-spacing: 0.05em
+  text-transform: uppercase
+  color: $black-light
+
+@mixin tag-text-white
+  @include font-family
+  font:
+    style: normal
+    size: 12px
+  @include normal
+  line-height: normal
+  text-align: center
+  letter-spacing: 0.05em
+  text-transform: uppercase
+  color: $white
+
+@mixin button-text-white
+  @include font-family
+  font-style: normal
+  @include bold
+  font-size: 14px
+  line-height: normal
+  text-align: center
+  letter-spacing: 0.1em
+  text-transform: uppercase
+  color: $white
+  +mq(425px)
+    line-height: 23px
+@mixin button-text-black
+  @include font-family
+  font-style: normal
+  @include bold
+  font-size: 12px
+  line-height: normal
+  text-align: center
+  letter-spacing: 0.1em
+  text-transform: uppercase
+  color: $black
+
+

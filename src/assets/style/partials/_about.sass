@@ -1,0 +1,38 @@
+@import "partials/variables"
+@import "partials/mixins"
+@import "partials/interfase"
+
+.about
+  background: url("../img/about/29_115.jpg") no-repeat bottom
+  background-color: rgba(0,0,0,.6)
+  background-blend-mode: darken
+  background-size: cover
+  //background-position: 0px -1260px
+  padding-top: 90px
+  padding-bottom: 90px
+  +mq(425px)
+    padding-top: 82px
+    padding-bottom: 82px
+  &_breadcrumb
+    display: flex
+    flex-direction: row
+    justify-content: center
+
+    li
+      @include paragraph
+      color: $white
+      a
+        @include paragraph
+        color: $white
+        padding-right: 5px
+        &:after
+          content: '>'
+          padding-left: 5px
+
+  h1
+    @include h1-title
+    color: $white
+    text-align: center
+    text-transform: uppercase
+    padding-top: 30px
+

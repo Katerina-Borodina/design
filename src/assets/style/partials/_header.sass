@@ -1,0 +1,93 @@
+@import "partials/variables"
+@import "partials/mixins"
+@import "partials/interfase"
+
+.header
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  padding: 20px 0
+  &_logo
+    +mq(768px)
+      width: 186px
+    a
+      color: #000000
+    span
+      text-transform: uppercase
+  &_nav
+    display: flex
+    flex-direction: row
+    width: 570px
+    justify-content: space-around
+    +mq(768px)
+      display: none
+    li
+      a
+        @include tag-text-black
+        position: relative
+        padding-bottom: 5px
+        //transition: .1s ease-out
+        //transition-delay: 0.1s
+        &:hover
+          color: $red
+          &::after
+            content: ''
+            display: block
+            position: absolute
+            width: 98%
+            height: 2px
+            background: $red
+            bottom: 0
+    &-mob
+      display: none
+      +mq(768px)
+        display: block
+  &_tel
+    display: flex
+    flex-direction: row
+    z-index: 999
+    &-text
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      align-items: flex-end
+      padding-right: 10px
+      +mq(768px)
+        display: none
+      a
+        &:first-child
+          @include tag-text-black
+        &:last-child
+          @include font-family
+          font-style: normal
+          @include normal
+          font-size: 12px
+          line-height: normal
+          letter-spacing: 0.05em
+          text-transform: uppercase
+          color: $red
+    .call-btn
+      +mq(768px)
+        width: 30px
+        height: 30px
+        display: flex
+        justify-content: center
+        padding: 6px
+      a
+        width: 16px
+        height: 16px
+        display: flex
+        justify-content: center
+        img
+          width: 16px
+          height: 16px
+header
+  .container-fluid
+    +mq(768px)
+      padding-right: 20px
+      padding-left: 20px
+
+
+
+
+

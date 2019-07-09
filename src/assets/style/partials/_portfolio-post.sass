@@ -1,0 +1,286 @@
+@import "partials/variables"
+@import "partials/mixins"
+@import "partials/interfase"
+
+
+.portfolio-post
+  position: relative
+  display: flex
+  flex-direction: column
+  +mq(425px)
+    height: 498px
+  &_breadcrumb
+    display: flex
+    flex-direction: row
+    position: relative
+    top: -140px
+    +mq(425px)
+      display: none
+    li
+      @include paragraph
+      color: $white
+      a
+        @include paragraph
+        color: $white
+        padding-right: 5px
+        &:after
+          content: '>'
+          padding-left: 5px
+  &_block
+    background: url("../img/portfolio/maxresdefault.jpg") no-repeat center
+    background-size: cover
+    width: 100%
+    height: 820px
+    position: relative
+    +mq(425px)
+      background-size: auto
+      width: auto
+      height: 358px
+      position: relative
+    .container
+      +mq(425px)
+        padding-right: 20px
+        padding-left: 20px
+        height: 140px
+        position: absolute
+        bottom: -139px
+    &-item
+      display: flex
+      flex-direction: column
+      width: 60%
+      height: 300px
+      background: $white
+      position: absolute
+      bottom: 0
+      +mq(1024px)
+        width: 65%
+      +mq(768px)
+        width: 85%
+      +mq(425px)
+        width: 100%
+        top: auto
+        height: 140px
+        bottom: -139px
+    .btn-share
+      right: 0
+      position: absolute
+      +mq(425px)
+        top: -50px
+    &-text
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+      height: 810px
+      +mq(425px)
+        height: 140px
+        justify-content: center
+      h4
+        @include h4-title
+        color: $black
+        +mq(425px)
+          font-size: 18px
+          line-height: 29px
+      h1
+        @include h1-title
+        color: $black
+        padding-bottom: 70px
+        padding-top: 16px
+        +mq(425px)
+          font-size: 36px
+          line-height: normal
+          padding: 0
+.description
+  width: 100%
+  &_img
+    width: 60%
+    float: left
+    +mq(1024px)
+      width: 100%
+      float: none
+    img
+      width: 100%
+  &_text
+    background-color: $white
+    width: 40%
+    float: right
+    padding: 90px 100px 0 30px
+    +mq(1024px)
+      width: 100%
+      float: none
+      padding-top: 50px
+      padding-right: 25px
+    &-item
+      display: flex
+      flex-basis: 50%
+      flex-direction: column
+      padding-bottom: 50px
+      +mq(425px)
+        flex-basis: 100%
+      .span-gray
+        @include font-family
+        font-style: normal
+        @include bold
+        font-size: 14px
+        line-height: normal
+        text-transform: uppercase
+        color: $gray
+        padding-bottom: 20px
+      .span-black
+        @include font-family
+        font-style: normal
+        @include normal
+        font-size: 24px
+        line-height: 39px
+        color: $black
+      &-wrap
+        display: flex
+        flex-wrap: wrap
+        flex-direction: row
+    p
+      @include paragraph
+      color: $black-light
+
+
+.description-reviews
+  padding-top: 60px
+  width: 100%
+  &_img
+    width: 60%
+    float: right
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    +mq(1024px)
+      width: 100%
+      float: none
+    img
+      width: 100%
+    .btn-share
+      position: absolute
+      right: 0
+      top: 0
+    .play
+      position: absolute
+  &_text
+    background-color: $white
+    width: 40%
+    float: left
+    padding: 290px 30px 0 100px
+    +mq(1024px)
+      width: 100%
+      float: none
+      padding: 60px 25px
+    &-title
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      +mq(425px)
+        align-items: center
+      .span-gray
+        @include font-family
+        font-style: normal
+        @include bold
+        font-size: 14px
+        line-height: normal
+        text-transform: uppercase
+        color: $gray
+        +mq(425px)
+          padding-bottom: 10px
+      .span-black
+        @include font-family
+        font-style: normal
+        @include normal
+        font-size: 24px
+        line-height: 39px
+        color: $black
+        +mq(425px)
+          padding-bottom: 10px
+    &-img
+      border: 4px solid $red
+      width: 110px
+      height: 110px
+      margin-right: 30px
+      +mq(425px)
+        margin-right: 0
+        margin-bottom: 30px
+      img
+        width: 100%
+      &-wrap
+        display: flex
+        flex-direction: row
+        padding-bottom: 30px
+        +mq(425px)
+          flex-direction: column
+          align-items: center
+    p
+      @include paragraph
+      color: $black-light
+      +mq(425px)
+        text-align: center
+  &_social
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    width: 90px
+    &-img
+      width: 40px
+      height: 40px
+      border: 1px solid $border-color
+      display: flex
+      justify-content: center
+
+.portfolio-btn
+  &-group
+    display: flex
+    flex-direction: row
+    padding-top: 80px
+    justify-content: space-around
+    align-items: center
+    position: relative
+    +mq(425px)
+      padding-bottom: 20px
+    .portfolio-btn-text
+      &:first-child
+        img
+          padding-right: 30px
+      &:last-child
+        img
+          padding-left: 30px
+    .more-btn
+      +mq(768px)
+        width: 270px
+      +mq(425px)
+        position: absolute
+        top: 0
+        width: 270px
+
+  &-text
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    text-align: center
+    &--text-left
+      padding-left: 5px
+      img
+        +mq(425px)
+          padding-right: 5px
+      +mq(425px)
+        text-align: left
+    &--text-right
+      padding-right: 5px
+
+      img
+        +mq(425px)
+          padding-left: 5px
+      +mq(425px)
+        text-align: right
+
+
+
+
+
+
+
+
+

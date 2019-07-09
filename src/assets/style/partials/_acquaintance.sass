@@ -1,0 +1,90 @@
+@import "partials/variables"
+@import "partials/mixins"
+@import "partials/interfase"
+
+.pos-rel
+  position: relative
+
+.acquaintance
+  padding-top: 116px
+  +mq(425px)
+    padding-top: 60px
+  &_bg
+    width: 508.77px
+    height: 299.65px
+    background-color: $gray-light
+    position: absolute
+    top: 0
+    z-index: -1
+    transform: translateY(50%)
+    +mq(425px)
+      justify-content: center
+      display: flex
+      align-self: center
+      top: auto
+      width: 236.84px
+      height: 132.63px
+  &_img
+    +mq(425px)
+      height: 270px
+      justify-content: center
+      display: flex
+    img
+      max-width: 100%
+      width: 378px
+      +mq(425px)
+        height: 270px
+    &-block
+      display: flex
+      justify-content: center
+      +mq(425px)
+        flex-direction: column
+      h4
+        display: none
+        +mq(425px)
+          display: block
+          @include h4-title
+          text-align: center
+          padding-bottom: 10px
+      h2
+        display: none
+        +mq(425px)
+          display: block
+          @include h2-title
+          text-align: center
+          position: relative
+          margin-bottom: 50px
+          &:after
+            @include line-red
+            bottom: -20px
+            left: 50%
+            margin-left: -15px
+  &_text
+    h4
+      @include signature
+      padding-bottom: 10px
+      +mq(425px)
+        display: none
+    h2
+      position: relative
+      @include h2-title
+      margin-bottom: 20px
+      &:after
+        @include line-red
+        left: 0
+        bottom: -20px
+      +mq(425px)
+        display: none
+    &-paragraph
+      @include paragraph
+      padding-top: 26px
+      padding-bottom: 34px
+      +mq(425px)
+        display: none
+      &--mob
+        display: none
+        @include paragraph
+        padding: 26px 10px 34px 10px
+        +mq(425px)
+          display: block
+

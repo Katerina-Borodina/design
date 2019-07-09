@@ -1,0 +1,231 @@
+@import "variables"
+@import "mixins"
+
+.btn
+  background: $red
+  width: 290px
+  height: 60px
+  border: none
+  z-index: 999
+  cursor: pointer
+  a
+    @include button-text-white
+
+  &:hover
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), #FF0000
+  &-small
+    width: 270px
+    height: 50px
+    a
+      @include button-text-white
+    &:hover
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), #FF0000
+    &-empty
+      width: 270px
+      height: 50px
+      background: transparent
+      border: 1px solid $border-color
+      a
+        @include button-text-black
+      &:hover
+        border: 1px solid $red
+
+
+.button-text
+  width: 200px
+  color: $red
+  @include font-family
+  font-style: normal
+  @include bold
+  font-size: 14px
+  line-height: normal
+  letter-spacing: 0.1em
+  text-transform: uppercase
+  transition: .1s ease-out
+  transition-delay: 0.1s
+  z-index: 999
+  cursor: pointer
+  img
+    padding-left: 10px
+    transition: .1s ease-out
+    transition-delay: 0.1s
+  &:hover
+    color: $black
+    img
+      padding-left: 0!important
+.btn-text
+  @include font-family
+  font-style: normal
+  @include bold
+  font-size: 12px
+  line-height: normal
+  text-align: center
+  letter-spacing: 0.1em
+  text-transform: uppercase
+  color: $red
+  transition: .1s ease-out
+  transition-delay: 0.1s
+  z-index: 999
+  cursor: pointer
+  &:hover
+    color: $white
+
+.portfolio-btn-text
+  @include font-family
+  font-style: normal
+  @include bold
+  font-size: 12px
+  line-height: normal
+  letter-spacing: 0.1em
+  text-transform: uppercase
+  color: $black
+  transition: .1s ease-out
+  transition-delay: 0.1s
+  z-index: 999
+  cursor: pointer
+  img
+    transition: .1s ease-out
+    transition-delay: 0.1s
+  &:hover
+    color: $red
+
+.more-btn
+  width: 470px
+  height: 50px
+  border: 1px solid $border-color
+  @include font-family
+  @include bold
+  font-style: normal
+  font-size: 12px
+  line-height: normal
+  text-align: center
+  letter-spacing: 0.1em
+  text-transform: uppercase
+  color: $black
+  transition: .1s ease-out
+  transition-delay: 0.1s
+  padding-top: 15px
+  z-index: 999
+  cursor: pointer
+  img
+    padding-left: 16px
+    transition: .1s ease-out
+    transition-delay: 0.1s
+  &:hover
+    color: $red
+
+.btn-group
+  display: flex
+  flex-direction: row
+  border: none
+  background: $white
+  height: 50px
+  width: 225px
+  position: absolute
+  top: 790px
+  right: 0
+  z-index: 999
+  cursor: pointer
+  .phone-group
+    padding: 15px
+    background: $red
+    position: relative
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      width: 13px
+      height: 13px
+      left: 43px
+      top: 19px
+      background: $red
+      transform: rotate(-45deg)
+  +mq(425px)
+    display: none
+  a
+    @include h6-title
+    padding-left: 25px
+
+.btn-share
+  width: 50px
+  height: 50px
+  z-index: 999
+  cursor: pointer
+  img
+    background-color: $black-light
+    padding: 16.5px
+    transition: .1s ease-out
+    transition-delay: 0.1s
+  &:hover
+    img
+      background-color: $red
+
+.call-btn
+  padding: 10px
+  background-color: $black-light
+  transition: .1s ease-out
+  transition-delay: 0.1s
+  z-index: 999
+  cursor: pointer
+  &:hover
+    background-color: $red
+
+.submit-btn
+  background-color: $red
+  width: 50px
+  height: 50px
+  transition: .1s ease-out
+  transition-delay: 0.1s
+  z-index: 999
+  cursor: pointer
+  &:hover
+    background-color: $black-light
+
+
+.dropbtn
+  background-color: transparent
+  color: $black
+  @include paragraph
+  border: none
+  cursor: pointer
+  margin: 10px 0 10px 0
+  span
+    padding-right: 15px
+
+.dropdown
+  position: relative
+  display: none
+  +mq(768px)
+    padding-top: 50px
+    padding-bottom: 50px
+    text-align: center
+    width: 290px
+    display: flex
+    justify-content: center
+    margin: 0 auto
+
+.dropdown-content
+  display: none
+  position: absolute
+  background-color: #f6f6f6
+  min-width: 100%
+  z-index: 1
+  top: 110px
+
+.dropdown-content a
+  color: black
+  padding: 15px 16px
+  text-decoration: none
+  display: block
+  text-transform: uppercase
+
+.dropdown-content a:hover
+  background-color: #f1f1f1
+
+.show
+  display: block
+
+.play
+  cursor: pointer
+  z-index: 999
+

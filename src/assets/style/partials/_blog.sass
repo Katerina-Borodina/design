@@ -1,0 +1,242 @@
+@import "partials/variables"
+@import "partials/mixins"
+@import "partials/interfase"
+
+.blog
+  padding-bottom: 138px
+.blog-top
+  padding-top: 66px
+  display: flex
+  flex-wrap: nowrap
+  justify-content: center
+  position: relative
+  +mq(425px)
+    padding-top: 40px
+    height: 510px
+  &_block
+    padding-bottom: 60px
+    +mq(768px)
+    +mq(1024px)
+      padding-bottom: 70px
+    +mq(425px)
+      height: 660px
+      position: relative
+      padding-bottom: 60px
+  &_item
+    width: 100%
+    height: 620px
+    background: url("../img/portfolio/111.jpg") no-repeat center
+    background-size: cover
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    position: relative
+    +mq(425px)
+      width: auto
+      height: 290px
+      background-size: cover
+      position: relative
+
+    .btn-share
+      position: absolute
+      right: 0
+  &_text
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    background-color: $white
+    width: 50%
+    height: 340px
+    position: absolute
+    padding:
+      top: 40px
+      left: 15px
+      bottom: 0
+      right: 35px
+    bottom: 0
+    +mq(425px)
+      position: relative
+      top: 289px
+      width: 100%
+      padding: 0
+      height: 310px
+    h3
+      @include font-family
+      @include normal
+      font-size: 36px
+      color: $black
+      line-height: normal
+      +mq(425px)
+        font-size: 24px
+        line-height: 39px
+    .inner_span
+      @include tag-text-white
+      padding: 6.5px 10.5px
+      background-color: $black-light
+      position: absolute
+      top: -30px
+      left: 0
+    p
+      @include paragraph-small
+      color: $black-light
+      padding-top: 25px
+      padding-bottom: 40px
+      +mq(425px)
+        padding-bottom: 20px
+    .text-sup
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      padding-top: 43px
+      +mq(425px)
+        padding-top: 17px
+      span
+        @include font-family
+        font-size: 12px
+        line-height: normal
+        letter-spacing: 0.05em
+        text-transform: uppercase
+        color: $gray
+        background: transparent
+
+.blog-bottom_block
+  .row
+    .ord-1
+      +mq(1024px)
+        order: 1
+    .ord-2
+      +mq(1024px)
+        order: 2
+    .ord-3
+      +mq(1024px)
+        order: 3
+        padding: 0
+.blog-bottom_main
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  +mq(425px)
+    flex-direction: column
+    align-content: center
+  +mq(375px)
+    flex-direction: row
+    align-content: normal
+  &-item
+    margin-bottom: 60px
+    width: 370px
+    position: relative
+    .btn-share
+      display: none
+      position: absolute
+      +mq(425px)
+        display: block
+        z-index: 9
+        right: 0
+    .main-item
+      &_link
+        margin-bottom: 20px
+        position: relative
+        height: 260px
+        .inner_span
+          @include tag-text-white
+          padding: 6.5px 10.5px
+          background-color: $black-light
+          position: absolute
+          bottom: 0
+          left: 0
+        a
+          height: 100%
+          width: 100%
+          display: inline-block
+          position: relative
+
+        img
+          width: 100%
+          height: 100%
+          object-fit: cover
+      &_text
+        h4
+          @include h4-title
+          color: $black
+        .text-sup
+          display: flex
+          flex-direction: row
+          justify-content: space-between
+          padding-top: 21px
+          +mq(425px)
+            padding-top: 17px
+          span
+            @include font-family
+            font-size: 12px
+            line-height: normal
+            letter-spacing: 0.05em
+            text-transform: uppercase
+            color: $gray
+            background: transparent
+.blog_number
+  display: flex
+  flex-direction: row
+  justify-content: center
+  position: relative
+  &--wrap
+    min-width: 100%
+  .d-sm-none
+    +mq(425px)
+      display: none
+  .active-portfolio-num
+    border: none
+    background-color: $red
+    a
+      color: $white
+  li
+    width: 34px
+    height: 34px
+    margin: 0 10px
+    border: 1px solid $border-color
+    display: flex
+    justify-content: center
+    +mq(425px)
+      &:nth-child(1)
+        display: none
+      &:nth-child(2)
+        display: none
+      &:nth-child(4)
+        display: none
+      &:nth-child(5)
+        display: none
+    a
+      @include h6-title
+      color: #171717
+  &--wrap
+    position: relative
+    padding-top: 56px
+    +mq(425px)
+      padding-top: 0
+      padding-bottom: 80px
+    .container-fluid
+      position: absolute
+      display: flex
+      flex-direction: column
+      justify-content: center
+      //height: 480px
+      +mq(425px)
+        height: auto
+        justify-content: flex-end
+  &_arrow
+    width: 35px
+    height: 35px
+    background-color: transparent
+    border: 1px solid #DEDEDE
+    display: flex
+    justify-content: center
+    img
+      z-index: 999
+    &-group
+      width: 100%
+      height: 50px
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-self: center
+

@@ -1,0 +1,183 @@
+@import "partials/variables"
+@import "partials/mixins"
+@import "partials/interfase"
+
+.object
+  padding-top: 107px
+  +mq(425px)
+    padding-top: 60px
+  h4
+    @include signature
+    padding-bottom: 10px
+    text-align: center
+  h2
+    @include h2-title
+    position: relative
+    text-align: center
+    margin-bottom: 20px
+    +mq(768px)
+      width: 90%
+      margin: 0 auto
+    &:after
+      @include line-red
+      left: 50%
+      margin-left: -15px
+      bottom: -20px
+    +mq(425px)
+      letter-spacing: 0.05em
+      width: 90%
+      margin: 0 auto
+  &_block
+    &:hover > .object_block-item:nth-child(1)
+      height: 201px
+      +mq(1199px)
+        height: 400px
+      +mq(320px)
+        height: 200px
+    &-text
+      display: none
+      padding: 33px 25px 0 25px
+      @include paragraph-small
+      color: $white
+    &-title
+      font-size: 20px
+      line-height: 29px
+      letter-spacing: 0.1em
+      color: $white
+      padding-top: 40px
+      padding-left: 24px
+      position: relative
+      &:before
+        content: ''
+        display: block
+        position: absolute
+        width: 10px
+        height: 20px
+        background: $red
+        left: 0
+        top: 45px
+    &-wrap
+      padding-top: 60px
+    &-item
+      border: 1px solid #000000
+      transition: all ease 0.3s
+      +mq(320px)
+        height: 200px!important
+      &:hover
+        height: 401px!important
+        +mq(1199px)
+          height: 400px!important
+        .btn-text
+          display: block
+        .object_block-text
+          display: block
+        ~ .object_block-item
+          height: 201px
+          +mq(1199px)
+            height: 400px
+          +mq(425px)
+            height: 200px
+      .btn-text
+        padding-top: 120px
+        display: none
+      &--big
+        height: 401px
+        +mq(425px)
+          height: 200px
+        &:hover
+          +mq(425px)
+            height: 401px
+      &--small
+        height: 201px
+        +mq(425px)
+          height: 200px
+        &:hover
+          +mq(425px)
+            height: 401px
+      &_1
+        background: url("../img/object/interyer-vannoy-komnaty-vorobevskoe-shosse-foto-2017-2018-sovremennye-idei-02.jpg") no-repeat center
+        background-size: cover
+        background-color: rgba(0, 0, 0, .5)
+        background-blend-mode: darken
+        &:hover
+          background: url("../img/object/interyer-vannoy-komnaty-vorobevskoe-shosse-foto-2017-2018-sovremennye-idei-02.jpg") no-repeat center
+          background-size: cover
+          background-color: rgba(0, 0, 0, .8)
+          background-blend-mode: darken
+      &_2
+        background: url("../img/object/ef1439dd44a52a77dae5f3633a631e9c.jpg") no-repeat center
+        background-size: cover
+        background-color: rgba(0, 0, 0, .5)
+        background-blend-mode: darken
+        &:hover
+          background: url("../img/object/ef1439dd44a52a77dae5f3633a631e9c.jpg") no-repeat center
+          background-size: cover
+          background-color: rgba(0, 0, 0, .8)
+          background-blend-mode: darken
+
+      &_3
+        background: url("../img/object/e8e2d097db313c9dc37a297c54f2.jpg") no-repeat center
+        background-size: cover
+        background-color: rgba(0, 0, 0, .5)
+        background-blend-mode: darken
+        &:hover
+          background: url("../img/object/e8e2d097db313c9dc37a297c54f2.jpg") no-repeat center
+          background-size: cover
+          background-color: rgba(0, 0, 0, .8)
+          background-blend-mode: darken
+      &_4
+        background: url("../img/object/15554464545cb63ab6cd0d2.jpg") no-repeat center
+        background-size: cover
+        background-color: rgba(0, 0, 0, .5)
+        background-blend-mode: darken
+        &:hover
+          background: url("../img/object/15554464545cb63ab6cd0d2.jpg") no-repeat center
+          background-size: cover
+          background-color: rgba(0, 0, 0, .8)
+          background-blend-mode: darken
+      &_5
+        background: url("../img/object/interyer-vannoy-komnaty-vorobevskoe-shosse-foto-2017-2018-sovremennye-idei-02.jpg") no-repeat center
+        background-size: cover
+        background-color: rgba(0, 0, 0, .5)
+        background-blend-mode: darken
+        &:hover
+          background: url("../img/object/interyer-vannoy-komnaty-vorobevskoe-shosse-foto-2017-2018-sovremennye-idei-02.jpg") no-repeat center
+          background-size: cover
+          background-color: rgba(0, 0, 0, .8)
+          background-blend-mode: darken
+      &_6
+        background: url("../img/object/ef1439dd44a52a77dae5f3633a631e9c.jpg") no-repeat center
+        background-size: cover
+        background-color: rgba(0, 0, 0, .5)
+        background-blend-mode: darken
+        &:hover
+          background: url("../img/object/ef1439dd44a52a77dae5f3633a631e9c.jpg") no-repeat center
+          background-size: cover
+          background-color: rgba(0, 0, 0, .8)
+          background-blend-mode: darken
+      &_7
+        background: url("../img/object/e8e2d097db313c9dc37a297c54f2.jpg") no-repeat center
+        background-size: cover
+        background-color: rgba(0, 0, 0, .5)
+        background-blend-mode: darken
+        &:hover
+          background: url("../img/object/e8e2d097db313c9dc37a297c54f2.jpg") no-repeat center
+          background-size: cover
+          background-color: rgba(0, 0, 0, .8)
+          background-blend-mode: darken
+      &_8
+        background: url("../img/object/15554464545cb63ab6cd0d2.jpg") no-repeat center
+        background-size: cover
+        background-color: rgba(0, 0, 0, .5)
+        background-blend-mode: darken
+        &:hover
+          background: url("../img/object/15554464545cb63ab6cd0d2.jpg") no-repeat center
+          background-size: cover
+          background-color: rgba(0, 0, 0, .8)
+          background-blend-mode: darken
+    &-wrap
+      .container
+        .row
+          .col-xl-3
+            padding-right: 0
+            padding-left: 0

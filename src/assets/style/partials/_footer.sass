@@ -1,0 +1,141 @@
+@import "partials/variables"
+@import "partials/mixins"
+@import "partials/interfase"
+
+.footer
+  background-color: $black
+  color: $white
+  padding-top: 80px
+  +mq(768px)
+    padding-top: 60px
+  &_top
+    border-bottom: 1px solid rgba(225, 232, 237, .2)
+    padding-bottom: 60px
+    +mq(768px)
+      padding-bottom: 62px
+    &-logo
+      padding-bottom: 30px
+      a
+        color: #ffffff
+        text-transform: uppercase
+    p
+      @include paragraph-small
+      color: $white
+      opacity: 0.8
+      margin-bottom: 30px
+      margin-right: 21px
+      &:last-child
+        margin-bottom: 0
+    .container
+      +mq(768px)
+        padding-right: 25px
+        padding-left: 25px
+      .row
+        .col-xl-3
+          h5
+            @include h5-title
+            color: $white
+            text-transform: uppercase
+            padding-bottom: 32px
+            //+mq(768px)
+            //  padding-top: 42px
+          ul
+            .icon-bg
+              margin-left: 40px
+              position: relative
+            .mail:after
+              content: ''
+              display: block
+              position: absolute
+              background: url("../img/mail-footer.svg") no-repeat center
+              width: 20px
+              height: 15px
+              top: 5px
+              left: -40px
+            .phone:after
+              content: ''
+              display: block
+              position: absolute
+              background: url("../img/phone-footer.svg") no-repeat center
+              width: 20px
+              height: 20px
+              top: 2px
+              left: -40px
+          .ul-border
+            width: 200px
+
+  &_link
+    @include font-family
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 40px
+    color: $white
+    opacity: 0.8
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15)
+    a
+      @include font-family
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 26px
+      color: $white
+      opacity: 0.8
+      transition: .1s ease-out
+      transition-delay: 0.1s
+      &:hover
+        color: $red
+  &-icon
+    margin-bottom: 24px
+    li
+      padding-bottom: 30px
+      &:last-child
+        padding-bottom: 0px
+      a
+        @include font-family
+        font-style: normal
+        font-weight: normal
+        font-size: 16px
+        line-height: 26px
+        color: $white
+        opacity: 0.8
+        transition: .1s ease-out
+        transition-delay: 0.1s
+        &:hover
+          color: $red
+  &_social-link
+    width: 173px
+    display: flex
+    justify-content: space-between
+    margin-left: -20px
+    a
+      flex-shrink: 0
+      height: 50px
+      width: 50px
+      display: flex
+      justify-content: center
+      transition: all .1s ease-out
+      transition-delay: 0.1s
+      &:hover
+        background: $red
+
+  &_bottom
+    padding: 15px 0 13px
+    +mq(768px)
+      padding: 18px 0 24px
+    .container
+      display: flex
+      justify-content: space-between
+      +mq(768px)
+        flex-direction: column
+      p
+        @include paragraph-small
+        color: $white
+        &:first-child
+          +mq(768px)
+            font-size: 12px
+            line-height: 20px
+            padding-bottom: 9px
+        +mq(768px)
+          text-align: center
+

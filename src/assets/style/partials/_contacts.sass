@@ -1,0 +1,136 @@
+@import "partials/variables"
+@import "partials/mixins"
+@import "partials/interfase"
+
+.contacts
+  padding-top: 80px
+  h4
+    @include signature
+    text-align: center
+    padding-bottom: 10px
+    +mq(425px)
+      font-size: 18px
+      line-height: 29px
+  h2
+    position: relative
+    @include h2-title
+    text-align: center
+    margin-bottom: 20px
+    &:after
+      @include line-red
+      left: 50%
+      margin-left: -15px
+      bottom: -20px
+
+  &_block
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    flex-direction: row
+    padding-top: 56px
+  &_item
+    display: flex
+    flex-direction: column
+    span
+      font-family: Noto Sans, sans-serif
+      font-weight: bold
+      font-size: 14px
+      line-height: 19px
+      text-transform: uppercase
+      color: #999999
+      padding-bottom: 20px
+    a
+      font-family: Noto Sans, sans-serif
+      font-weight: normal
+      font-size: 18px
+      line-height: 29px
+      color: #000000
+      text-decoration: none
+      cursor: pointer
+      padding-bottom: 20px
+
+    p
+      font-family: Noto Sans, sans-serif
+      font-weight: normal
+      font-size: 18px
+      line-height: 29px
+      color: #000000
+  &_form
+    padding-top: 16px
+    max-width: 100%
+    text-align: center
+    margin: 0 auto
+    padding-bottom: 120px
+    display: flex
+    +mq(650px)
+      padding-right: 25px
+      padding-left: 25px
+      padding-top: 0
+    .half
+      float: left
+      width: 270px
+      +mq(650px)
+        width: 100%
+    .right
+      margin-right: 2%
+      +mq(650px)
+        width: 100%
+    .left
+      margin-right: 2%
+    .submit-group
+      float: right
+      #input-submit
+        background: url("../img/sent-mail.svg") no-repeat center
+        cursor: pointer
+        border: none
+        margin-top: 0
+    .group
+      float: left
+      width: 570px
+      display: flex
+      justify-content: space-between
+      height: 156px
+      +mq(650px)
+        width: 100%
+      +mq(425px)
+        width: 270px
+      .textarea
+        width: 500px
+        float: left
+        +mq(650px)
+          width: 80%
+        +mq(425px)
+          width: 220px
+        textarea
+          height: 50px
+          float: right
+
+input, textarea
+  border: 0
+  outline: 0
+  padding: 1em
+  display: block
+  width: 100%
+  margin-top: 30px
+  @include font-family
+  border-bottom: 1px solid #E1E8ED
+  resize: none
+  +mq(650px)
+    padding-left: 0
+  //margin-top: 20px
+  &::-webkit-input-placeholder
+    color: $gray
+    font-size: 16px
+    line-height: 26px
+  &::-moz-placeholder
+    color: $gray
+    font-size: 16px
+    line-height: 26px
+  &:-moz-placeholder
+    color: $gray
+    font-size: 16px
+    line-height: 26px
+  &:-ms-input-placeholder
+    color: $gray
+    font-size: 16px
+    line-height: 26px

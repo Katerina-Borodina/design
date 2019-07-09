@@ -1,0 +1,210 @@
+@import "partials/variables"
+@import "partials/mixins"
+@import "partials/interfase"
+
+.portal
+  padding-top: 120px
+  display: flex
+  flex-direction: column
+  +mq(425px)
+    padding-top: 60px
+  &_subtitle
+    @include signature
+    padding-bottom: 10px
+    text-align: center
+    +mq(425px)
+      display: none
+  &_title
+    @include h2-title
+    position: relative
+    text-align: center
+    margin-bottom: 20px
+    &:after
+      @include line-red
+      left: 50%
+      margin-left: -15px
+      bottom: -20px
+    +mq(425px)
+      display: none
+  &_header-mob
+    display: none
+    +mq(425px)
+      display: block
+    h6
+      @include signature
+      padding-bottom: 10px
+      text-align: center
+      +mq(425px)
+        font-size: 12px
+        padding-bottom: 0
+    h2
+      @include h2-title
+      position: relative
+      text-align: center
+      margin-bottom: 20px
+      &:after
+        @include line-red
+        left: 50%
+        margin-left: -15px
+        bottom: -20px
+  &_present
+    background: url("../img/portal/interyer-vannoy-komnaty-vorobevskoe-shosse-foto-2017-2018-sovremennye-idei-02.jpg") no-repeat center
+    background-color: rgba(0,0,0,0.6)
+    background-blend-mode: darken
+    background-size: cover
+    display: flex
+    flex-direction: column
+    width: 570px
+    height: 570px
+    justify-content: space-between
+    position: relative
+    +mq(375px)
+      width: 290px
+      height: 290px
+    &-wrap
+      padding-top: 66px
+      padding-bottom: 60px
+      +mq(425px)
+        padding-top: 40px
+    &-title
+      width: 100%
+      padding-top: 100px
+      +mq(768px)
+        padding-top: 17px
+        padding-left: 15px
+        width: 260px
+      h4
+        @include h4-title
+        color: $white
+        padding-left: 37px
+        width: 270px
+        +mq(425px)
+          font-size: 18px
+          line-height: 29px
+          padding-left: 15px
+    .tab-top
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      span
+        width: 100px
+        height: 30px
+        display: inline-block
+        @include tag-text-white
+        padding: 7px 27px
+        background-color: $black-light
+    .play
+      justify-content: center
+      display: flex
+      position: absolute
+      transform: translate(255px,255px)
+      img
+        +mq(425px)
+          width: 40px
+          height: 40px
+    .text-sup
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      padding-top: 27px
+      padding-bottom: 32px
+      +mq(425px)
+        padding-bottom: 15px
+        padding-top: 17px
+      span
+        @include font-family
+        font-size: 12px
+        line-height: normal
+        letter-spacing: 0.05em
+        text-transform: uppercase
+        color: $gray
+        &:first-child
+          padding-left: 37px
+          +mq(425px)
+            padding-left: 15px
+        &:last-child
+          padding-right: 53px
+          +mq(425px)
+            padding-right: 15px
+  &_block
+    display: flex
+    flex-direction: column
+    +mq(768px)
+      width: 570px
+      margin: 0 auto
+    +mq(425px)
+      width: 100%
+      padding-top: 40px
+  &_item
+    display: flex
+    flex-direction: row
+    +mq(425px)
+      flex-direction: column
+    &:nth-child(1)
+      padding-bottom: 30px
+      +mq(425px)
+        padding-bottom: 40px
+    &:nth-child(2)
+      padding-bottom: 30px
+      +mq(425px)
+        padding-bottom: 40px
+    &-img
+      width: 170px
+      height: 170px
+      margin-right: 30px
+      img
+        max-width: 170px
+        min-height: 170px
+        object-fit: cover
+        height: 170px
+        width: 170px
+        +mq(425px)
+          max-width: 290px
+          min-height: 290px
+      +mq(425px)
+        width: 290px
+        height: 290px
+    &-text
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      position: relative
+      +mq(425px)
+        width: 290px
+        margin: 0 auto
+        padding-top: 25px
+      .tab-top
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        +mq(425px)
+          position: absolute
+          top: -30px
+        span
+          width: 80px
+          height: 30px
+          display: inline-block
+          @include tag-text-white
+          padding: 7px 27px
+          background-color: $black-light
+      h4
+        @include h4-title
+        color: $black
+      .text-sup
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        +mq(425px)
+          padding-top: 20px
+        span
+          @include font-family
+          font-size: 12px
+          line-height: normal
+          letter-spacing: 0.05em
+          text-transform: uppercase
+          color: $gray
+  button
+    margin: 0 auto
+
+
+

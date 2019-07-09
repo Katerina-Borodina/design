@@ -1,0 +1,101 @@
+@import "partials/variables"
+@import "partials/mixins"
+@import "partials/interfase"
+
+html
+  scroll-behavior: smooth
+
+.servises_slider
+  position: relative
+  display: flex
+  flex-direction: column
+  +mq(425px)
+    height: 498px
+  &-down
+    display: flex
+    flex-direction: row
+    justify-content: center
+    position: absolute
+    width: 170px
+    height: 80px
+    z-index: 9
+    align-self: center
+    bottom: 0
+    background-color: $white
+    +mq(425px)
+      display: none
+    a
+      display: flex
+      flex-direction: column
+      justify-content: center
+      @include font-family
+      font-style: normal
+      @include bold
+      font-size: 12px
+      line-height: normal
+      letter-spacing: 0.1em
+      text-transform: uppercase
+      color: $black-light
+      transition: .1s ease-out
+      transition-delay: 0.1s
+      &:hover
+        color: $red
+      img
+        padding-top: 10px
+
+  &_block
+    background: url("../img/services/333.jpg") no-repeat center
+    background-size: cover
+    width: 100%
+    height: 820px
+    position: relative
+    +mq(425px)
+      height: 208px
+
+    .container
+      +mq(425px)
+        padding-right: 20px
+        padding-left: 20px
+    &-item
+      display: flex
+      flex-direction: column
+      width: 55%
+      height: 500px
+      background: $white
+      position: absolute
+      top: 120px
+      +mq(1024px)
+        width: 65%
+      +mq(768px)
+        width: 85%
+      +mq(425px)
+        width: 100%
+        top: 210px
+        height: 290px
+
+      .btn
+        align-self: flex-end
+        position: absolute
+        bottom: 0
+        +mq(425px)
+          align-self: center
+          bottom: 20px
+    &-text
+      display: flex
+      flex-direction: column
+      h1
+        padding-top: 220px
+        padding-bottom: 19px
+        @include h1-title
+        +mq(425px)
+          padding-top: 235px
+          font-size: 24px
+          line-height: 36px
+      p
+        padding-bottom: 84px
+        @include subtitle-text
+        +mq(425px)
+          font-size: 18px
+          line-height: 29px
+          color: $black-light
+

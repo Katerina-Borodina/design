@@ -1,0 +1,112 @@
+@import "partials/variables"
+@import "partials/mixins"
+@import "partials/interfase"
+
+.faq
+  padding-top: 90px
+  padding-bottom: 89px
+  +mq(425px)
+    padding-top: 60px
+  &_breadcrumb
+    display: flex
+    flex-direction: row
+    justify-content: center
+    +mq(425px)
+      display: none
+    li
+      @include paragraph
+      color: $black
+      a
+        @include paragraph
+        color: $black
+        padding-right: 5px
+        &:after
+          content: '>'
+          padding-left: 5px
+  h1
+    @include h1-title
+    color: $black
+    text-align: center
+    padding-top: 30px
+    +mq(425px)
+      font-size: 36px
+      line-height: 40px
+      padding-top: 0
+.policy
+  margin-bottom: 36px
+  &_nav
+    +mq(991px)
+      margin-bottom: 30px
+    &-desk
+      +mq(991px)
+        display: none
+    &-mob
+      display: none
+      +mq(991px)
+        display: block
+    &-list
+      border-bottom: 1px solid  #E1E8ED
+      border-top: 1px solid  #E1E8ED
+      +mq(991px)
+        border-bottom: none
+      &-item
+        padding: 20px 0 13px 20px
+        border-bottom: 1px solid  #E1E8ED
+        cursor: pointer
+        @include paragraph
+        opacity: 0.6
+        transition: $b-transition
+        &:last-child
+          border-bottom: none
+        &.is-active
+          position: relative
+          opacity: 1
+          +mq(991px)
+            padding-left: 32px
+          &::before
+            content: ""
+            position: absolute
+            background: $red
+            left: 0
+            top: 0
+            width: 4px
+            height: 100%
+          +mq(991px)
+            display: flex
+            align-items: center
+            &::before
+              content: url("../img/faq-vector.svg")
+              position: absolute
+              width: 9px
+              height: auto
+              background: none
+              top: initial
+
+
+  &_main
+    &-desk
+      +mq(991px)
+        display: none
+    &-accordion
+      &.is-active
+        +mq(991px)
+          border-bottom: 1px solid  #E1E8ED
+      h3
+        @include h3-title
+        margin-bottom: 30px
+        +mq(991px)
+          margin-top: 30px
+      p
+        @include paragraph
+        margin-bottom: 30px
+    &-block
+      h5
+        @include h5-title
+        margin-bottom: 18px
+      a
+        color: $red
+
+
+
+
+
